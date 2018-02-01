@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>host</key>
+	<string>interview.merchv.com</string>
+	<key>protocol</key>
+	<string>https://</string>
+	<key>port</key>
+	<string>8443</string>
+	<key>path</key>
+	<string>/Interview/</string>
+	<key>connect</key>
+	<string>Connect</string>
+</dict>
+</plist>
