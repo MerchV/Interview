@@ -8,15 +8,15 @@ This project is intended to be viewed by companies interested in interviewing me
 
 This project demonstrates a standard app that displays and updates connect from a JSON API. As such, it demonstrates the following common techniques:
 
-- Networking using URLSession.
+- Networking using _URLSession._
 
-- Persistence using Core Data.
+- Persistence using _Core Data._
 
-- Multithreading using OperationQueue. 
+- Multithreading using _OperationQueue._ 
 
-- Custom screen transitions using UIViewControllerAnimatedTransitioning. 
+- Custom screen transitions using _UIViewControllerAnimatedTransitioning._ 
 
-- Unit testing using XCTestCase.
+- Unit testing using _XCTestCase._
 
 The app is not intended to look good, as that would require graphical design consideration.
 
