@@ -6,7 +6,7 @@ This is a work in progress and not complete.
 
 This project is intended to be viewed by companies interested in interviewing me for iOS development roles. 
 
-This project demonstrates the following techniques:
+This project demonstrates a standard app that displays and updates connect from a JSON API. As such, it demonstrates the following common techniques:
 
 - Networking using URLSession.
 
