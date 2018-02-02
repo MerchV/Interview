@@ -57,6 +57,11 @@ class EditGameViewController: UIViewController {
             self?.scrollView?.contentInset = .zero
             self?.scrollView?.scrollIndicatorInsets = .zero
         }
+
+        if mode == .new {
+            let closeButton = UIBarButtonItem(title: NSLocalizedString("Close", comment: ""), style: .done, target: self, action: #selector(closeButtonPressed(_:)))
+            navigationItem.leftBarButtonItem = closeButton
+        }
     }
 
     override func decodeRestorableState(with coder: NSCoder) {
@@ -111,8 +116,13 @@ class EditGameViewController: UIViewController {
     
     // MARK: - Actions
 
-    @IBAction func dismissButtonPressed(_ sender: UIBarButtonItem) {
+    @objc func closeButtonPressed(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
+    }
+
+    @IBAction func dismissButtonPressed(_ sender: UIBarButtonItem) {
+//        dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: "unwind1", sender: self)
     }
 
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
@@ -126,7 +136,7 @@ class EditGameViewController: UIViewController {
             OperationsManager.sharedInstance.deleteGame(id: game.id, completion: { [weak self] (succeeded:Bool) in
                 if succeeded {
 //                    self?.dismiss(animated: true, completion: nil)
-                    self?.performSegue(withIdentifier: "UnwindToListAfterDeleteGamea", sender: self)
+                    self?.performSegue(withIdentifier: "UnwindToListAfterDeleteGame", sender: self)
                 } else {
 
                 }

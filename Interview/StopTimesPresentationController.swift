@@ -14,11 +14,11 @@ import UIKit
 
     lazy var dismissingView: UIView = {
         let view = UIView()
-        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissingViewTapped))
-        view.addGestureRecognizer(tap)
-        let swipe = UISwipeGestureRecognizer(target: self, action: #selector(dismissingViewTapped))
-        swipe.direction = .right
-        view.addGestureRecognizer(swipe)
+//        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissingViewTapped))
+//        view.addGestureRecognizer(tap)
+//        let swipe = UISwipeGestureRecognizer(target: self, action: #selector(dismissingViewTapped))
+//        swipe.direction = .right
+//        view.addGestureRecognizer(swipe)
         return view
     }()
 

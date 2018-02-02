@@ -8,7 +8,7 @@
 
 import Foundation
 
-// I'm doing the JSON parsing in extensions of the NSManagedObject subclass so that each managed object is responsible for its own JSON parsing
+// I'm doing the JSON parsing in extensions of the NSManagedObject subclass so that each managed object is responsible for its own JSON parsing.
 extension Game {
 
     func deserialize(jsonObject: [String:Any?]) {

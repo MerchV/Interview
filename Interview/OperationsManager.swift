@@ -46,7 +46,7 @@ class OperationsManager: NSObject {
 
     func getImage(urlString: String?, completion: @escaping (Bool, UIImage?) -> Void) {
         guard let urlString = urlString else { completion(false, nil); return }
-        URLSession.shared.downloadTask(with: URL(string: urlString)!) { (url:URL?, urlResponse:URLResponse?, error:Error?) in
+        URLSession.shared.downloadTask(with: URL(string: urlString)!) { (url:URL?, urlResponse:URLResponse?, error:Error?) in // This could be cached by putting downloads into the caches directory.
             guard error == nil else { completion(false, nil); return }
             guard let url = url else { completion(false, nil); return }
             if let data = try? Data(contentsOf: url, options: []) {

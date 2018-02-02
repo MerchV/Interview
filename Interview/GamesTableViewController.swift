@@ -15,7 +15,7 @@ class GameTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel?
 }
 
-class GamesTableViewController: UITableViewController {
+class GamesTableViewController: UITableViewController, UINavigationControllerDelegate {
 
     private var tableArray: [Game]?
 
@@ -51,6 +51,7 @@ class GamesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(#function)
+        navigationController?.delegate = self
         reloadModel()
     }
     
@@ -62,6 +63,9 @@ class GamesTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print(#function)
+        if let selected = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: selected, animated: true)
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -84,9 +88,9 @@ class GamesTableViewController: UITableViewController {
         if segue.identifier == "AddGameSegue" {
             let nc = segue.destination as! UINavigationController
             let editGameViewController = nc.topViewController as! EditGameViewController
+            editGameViewController.mode = .new
         } else if segue.identifier == "EditGameSegue" {
-            let nc = segue.destination as! UINavigationController
-            let editGameViewController = nc.topViewController as! EditGameViewController
+            let editGameViewController = segue.destination as! EditGameViewController
             let indexPath = tableView.indexPath(for: sender as! UITableViewCell)
             let game = tableArray?[indexPath!.row]
             editGameViewController.game = game
@@ -96,10 +100,12 @@ class GamesTableViewController: UITableViewController {
 
     // MARK: - Actions
 
-    @IBAction func gamesTableViewControllerUnwindAfterDeleteGame(_ segue: UIStoryboardSegue) {
+    @IBAction func gamesTableViewControllerUnwind1(_ segue: UIStoryboardSegue) {
         reloadModel()
         dismiss(animated: true, completion: nil)
     }
+
+    
     
     // MARK: - UITableViewDataSource
     
@@ -149,5 +155,16 @@ class GamesTableViewController: UITableViewController {
         }
     }
 
+    // MARK: - UINavigationControllerDelegate
+
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let bounceAnimator = SlideAnimator()
+        bounceAnimator.presenting = operation == .push
+        return bounceAnimator
+    }
+
 }
+
+
+
 

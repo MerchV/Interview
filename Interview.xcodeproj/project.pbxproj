@@ -14,6 +14,10 @@
 		B90AF7142014429800273629 /* OperationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90AF7132014429800273629 /* OperationsManager.swift */; };
 		B90AF71A20145B0E00273629 /* Endpoints.plist in Resources */ = {isa = PBXBuildFile; fileRef = B90AF71920145B0E00273629 /* Endpoints.plist */; };
 		B90AF71C20145DB000273629 /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90AF71B20145DB000273629 /* BaseOperation.swift */; };
+		B90DD21E20249C1900FCCA0B /* BounceNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90DD21D20249C1900FCCA0B /* BounceNavigationController.swift */; };
+		B90DD2212024D33A00FCCA0B /* SlideAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90DD2202024D33A00FCCA0B /* SlideAnimator.swift */; };
+		B941238C2023E14D007B7B21 /* AddGameSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941238B2023E14D007B7B21 /* AddGameSegue.swift */; };
+		B941238E2023EE09007B7B21 /* AddGameUnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941238D2023EE09007B7B21 /* AddGameUnwindSegue.swift */; };
 		B94B02BB201B4BF600049118 /* Game+Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94B02BA201B4BF600049118 /* Game+Serialization.swift */; };
 		B94B02BF201B4C3D00049118 /* GamesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94B02BE201B4C3D00049118 /* GamesTableViewController.swift */; };
 		B94B02C1201B681E00049118 /* EditGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94B02C0201B681E00049118 /* EditGameViewController.swift */; };
@@ -21,9 +25,7 @@
 		B9572DE2201AD5E000651538 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9572DE0201AD5E000651538 /* Model.xcdatamodeld */; };
 		B95A8225201FA4AE001A51ED /* TestDeleteGameOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95A8224201FA4AE001A51ED /* TestDeleteGameOperation.swift */; };
 		B95F04D72019BF76009B0800 /* GetGamesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95F04D62019BF76009B0800 /* GetGamesOperation.swift */; };
-		B980AAA12023498C006CACAC /* SlideAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B980AA9E2023498C006CACAC /* SlideAnimator.swift */; };
 		B980AAA22023498C006CACAC /* StopTimesPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B980AA9F2023498C006CACAC /* StopTimesPresentationController.swift */; };
-		B980AAA32023498C006CACAC /* StopTimesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B980AAA02023498C006CACAC /* StopTimesAnimator.swift */; };
 		B98A5253201F343200592B5D /* TestGetGamesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A5252201F343200592B5D /* TestGetGamesOperation.swift */; };
 		B98A5254201F3D3100592B5D /* GetGamesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95F04D62019BF76009B0800 /* GetGamesOperation.swift */; };
 		B98A5255201F3E6400592B5D /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B9572DDC201AD4B900651538 /* CoreDataManager.m */; };
@@ -32,10 +34,7 @@
 		B98A5258201F42E700592B5D /* Game+Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94B02BA201B4BF600049118 /* Game+Serialization.swift */; };
 		B98A525A201F488600592B5D /* DeleteGameOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A5259201F488600592B5D /* DeleteGameOperation.swift */; };
 		B98A525B201F488600592B5D /* DeleteGameOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A5259201F488600592B5D /* DeleteGameOperation.swift */; };
-		B9CC3C7C2023011100015901 /* AlertSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CC3C7B2023011100015901 /* AlertSegue.swift */; };
-		B9CC3C81202301A600015901 /* EditProfileCrossDissolveAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CC3C7E202301A600015901 /* EditProfileCrossDissolveAnimator.swift */; };
-		B9CC3C82202301A600015901 /* FadingAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CC3C7F202301A600015901 /* FadingAnimator.swift */; };
-		B9CC3C83202301A600015901 /* AlertAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CC3C80202301A600015901 /* AlertAnimator.swift */; };
+		B9CC3C7C2023011100015901 /* EditGameSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CC3C7B2023011100015901 /* EditGameSegue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +57,10 @@
 		B90AF7132014429800273629 /* OperationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationsManager.swift; sourceTree = "<group>"; };
 		B90AF71920145B0E00273629 /* Endpoints.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Endpoints.plist; sourceTree = "<group>"; };
 		B90AF71B20145DB000273629 /* BaseOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseOperation.swift; path = Interview/BaseOperation.swift; sourceTree = SOURCE_ROOT; };
+		B90DD21D20249C1900FCCA0B /* BounceNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceNavigationController.swift; sourceTree = "<group>"; };
+		B90DD2202024D33A00FCCA0B /* SlideAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideAnimator.swift; sourceTree = "<group>"; };
+		B941238B2023E14D007B7B21 /* AddGameSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameSegue.swift; sourceTree = "<group>"; };
+		B941238D2023EE09007B7B21 /* AddGameUnwindSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameUnwindSegue.swift; sourceTree = "<group>"; };
 		B94B02BA201B4BF600049118 /* Game+Serialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game+Serialization.swift"; sourceTree = "<group>"; };
 		B94B02BE201B4C3D00049118 /* GamesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesTableViewController.swift; sourceTree = "<group>"; };
 		B94B02C0201B681E00049118 /* EditGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGameViewController.swift; sourceTree = "<group>"; };
@@ -67,17 +70,12 @@
 		B9572DE1201AD5E000651538 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		B95A8224201FA4AE001A51ED /* TestDeleteGameOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDeleteGameOperation.swift; sourceTree = "<group>"; };
 		B95F04D62019BF76009B0800 /* GetGamesOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GetGamesOperation.swift; path = Interview/GetGamesOperation.swift; sourceTree = SOURCE_ROOT; };
-		B980AA9E2023498C006CACAC /* SlideAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideAnimator.swift; sourceTree = "<group>"; };
 		B980AA9F2023498C006CACAC /* StopTimesPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopTimesPresentationController.swift; sourceTree = "<group>"; };
-		B980AAA02023498C006CACAC /* StopTimesAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopTimesAnimator.swift; sourceTree = "<group>"; };
 		B98A5248201F340900592B5D /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98A524C201F340900592B5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B98A5252201F343200592B5D /* TestGetGamesOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGetGamesOperation.swift; sourceTree = "<group>"; };
 		B98A5259201F488600592B5D /* DeleteGameOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteGameOperation.swift; sourceTree = "<group>"; };
-		B9CC3C7B2023011100015901 /* AlertSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertSegue.swift; sourceTree = "<group>"; };
-		B9CC3C7E202301A600015901 /* EditProfileCrossDissolveAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileCrossDissolveAnimator.swift; sourceTree = "<group>"; };
-		B9CC3C7F202301A600015901 /* FadingAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadingAnimator.swift; sourceTree = "<group>"; };
-		B9CC3C80202301A600015901 /* AlertAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertAnimator.swift; sourceTree = "<group>"; };
+		B9CC3C7B2023011100015901 /* EditGameSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditGameSegue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,10 +117,10 @@
 		B90AF6FF20143E3900273629 /* Interview */ = {
 			isa = PBXGroup;
 			children = (
-				B9CC3C7D2023017000015901 /* Animators */,
+				B90DD21F2024D2ED00FCCA0B /* Animators */,
+				B90DD21C20249BFD00FCCA0B /* Controllers */,
 				B9CC3C7A2023009C00015901 /* Segues */,
 				B93A72F6201EB210004FB583 /* Operations */,
-				B94B02C2201B683300049118 /* View Models */,
 				B94B02BD201B4C3100049118 /* Extensions */,
 				B94B02BC201B4C2800049118 /* View Controllers */,
 				B94B02B8201B3B0600049118 /* Delegates */,
@@ -146,6 +144,22 @@
 				B9572DDB201AD4B800651538 /* Interview-Bridging-Header.h */,
 			);
 			name = Managers;
+			sourceTree = "<group>";
+		};
+		B90DD21C20249BFD00FCCA0B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B90DD21D20249C1900FCCA0B /* BounceNavigationController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B90DD21F2024D2ED00FCCA0B /* Animators */ = {
+			isa = PBXGroup;
+			children = (
+				B90DD2202024D33A00FCCA0B /* SlideAnimator.swift */,
+			);
+			name = Animators;
 			sourceTree = "<group>";
 		};
 		B93A72F6201EB210004FB583 /* Operations */ = {
@@ -183,13 +197,6 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
-		B94B02C2201B683300049118 /* View Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "View Models";
-			sourceTree = "<group>";
-		};
 		B9572DDF201AD5CC00651538 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,22 +218,12 @@
 		B9CC3C7A2023009C00015901 /* Segues */ = {
 			isa = PBXGroup;
 			children = (
-				B9CC3C7B2023011100015901 /* AlertSegue.swift */,
+				B980AA9F2023498C006CACAC /* StopTimesPresentationController.swift */,
+				B9CC3C7B2023011100015901 /* EditGameSegue.swift */,
+				B941238B2023E14D007B7B21 /* AddGameSegue.swift */,
+				B941238D2023EE09007B7B21 /* AddGameUnwindSegue.swift */,
 			);
 			name = Segues;
-			sourceTree = "<group>";
-		};
-		B9CC3C7D2023017000015901 /* Animators */ = {
-			isa = PBXGroup;
-			children = (
-				B980AA9E2023498C006CACAC /* SlideAnimator.swift */,
-				B980AAA02023498C006CACAC /* StopTimesAnimator.swift */,
-				B980AA9F2023498C006CACAC /* StopTimesPresentationController.swift */,
-				B9CC3C80202301A600015901 /* AlertAnimator.swift */,
-				B9CC3C7E202301A600015901 /* EditProfileCrossDissolveAnimator.swift */,
-				B9CC3C7F202301A600015901 /* FadingAnimator.swift */,
-			);
-			name = Animators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,22 +332,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				B90AF7142014429800273629 /* OperationsManager.swift in Sources */,
+				B941238C2023E14D007B7B21 /* AddGameSegue.swift in Sources */,
+				B941238E2023EE09007B7B21 /* AddGameUnwindSegue.swift in Sources */,
 				B9572DDE201AD4B900651538 /* CoreDataManager.m in Sources */,
 				B94B02C1201B681E00049118 /* EditGameViewController.swift in Sources */,
 				B95F04D72019BF76009B0800 /* GetGamesOperation.swift in Sources */,
+				B90DD2212024D33A00FCCA0B /* SlideAnimator.swift in Sources */,
 				B9572DE2201AD5E000651538 /* Model.xcdatamodeld in Sources */,
 				B90AF70120143E3900273629 /* AppDelegate.swift in Sources */,
-				B9CC3C81202301A600015901 /* EditProfileCrossDissolveAnimator.swift in Sources */,
+				B90DD21E20249C1900FCCA0B /* BounceNavigationController.swift in Sources */,
 				B98A525A201F488600592B5D /* DeleteGameOperation.swift in Sources */,
 				B980AAA22023498C006CACAC /* StopTimesPresentationController.swift in Sources */,
-				B980AAA32023498C006CACAC /* StopTimesAnimator.swift in Sources */,
 				B94B02BF201B4C3D00049118 /* GamesTableViewController.swift in Sources */,
 				B94B02BB201B4BF600049118 /* Game+Serialization.swift in Sources */,
 				B90AF71C20145DB000273629 /* BaseOperation.swift in Sources */,
-				B9CC3C82202301A600015901 /* FadingAnimator.swift in Sources */,
-				B9CC3C7C2023011100015901 /* AlertSegue.swift in Sources */,
-				B9CC3C83202301A600015901 /* AlertAnimator.swift in Sources */,
-				B980AAA12023498C006CACAC /* SlideAnimator.swift in Sources */,
+				B9CC3C7C2023011100015901 /* EditGameSegue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
