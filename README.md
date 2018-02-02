@@ -8,10 +8,14 @@ This project is intended to be viewed by companies interested in interviewing me
 
 This project demonstrates the following techniques:
 
-Networking using URLSession.
+- Networking using URLSession.
 
-Persistence using Core Data.
+- Persistence using Core Data.
 
-Multithreading using OperationQueue. 
+- Multithreading using OperationQueue. 
+
+- Custom screen transitions using UIViewControllerAnimatedTransitioning. 
 
 The app is not intended to look good, because that would require graphical design consideration.
+
+This app connects to a JSON API written by myself running on Java Servlets on a Tomcat server running on a VPS including a Let's Encrypt SSL certificate. That's not exposed anywhere in this project since it's not part of my role as an iOS developer but server development is something I take an interest in. 
