@@ -29,6 +29,8 @@ class PostGameOperation: BaseOperation {
         baseUrl.appendPathComponent("Games")
         guard let image = image else { succeeded = false; isFinished = true; return }
         guard let title = title else { succeeded = false; isFinished = true; return }
+        guard let developer = developer else { succeeded = false; isFinished = true; return }
+        guard let year = year else { succeeded = false; isFinished = true; return }
 
 
         let mimeTypeString = (image as NSData).mimeType() ?? "image/jpeg"
@@ -38,6 +40,12 @@ class PostGameOperation: BaseOperation {
 
         body.append("--__MV_BOUNDARY__\r\n".data(using: String.Encoding.utf8)!)
         body.append("Content-Disposition: form-data; name=\"title\"\r\n\r\n\(title)\r\n".data(using: String.Encoding.utf8)!)
+
+        body.append("--__MV_BOUNDARY__\r\n".data(using: String.Encoding.utf8)!)
+        body.append("Content-Disposition: form-data; name=\"year\"\r\n\r\n\(year)\r\n".data(using: String.Encoding.utf8)!)
+
+        body.append("--__MV_BOUNDARY__\r\n".data(using: String.Encoding.utf8)!)
+        body.append("Content-Disposition: form-data; name=\"developer\"\r\n\r\n\(developer)\r\n".data(using: String.Encoding.utf8)!)
 
 
 
