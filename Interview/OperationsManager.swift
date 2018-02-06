@@ -56,12 +56,20 @@ class OperationsManager: NSObject {
         }.resume()
     }
 
-    func deleteGame(id: Int32, completion: @escaping (Bool) -> Void) {
+    func deleteGame(id: Int64, completion: @escaping (Bool) -> Void) {
         let deleteGameOperation = DeleteGameOperation(coreDataManager: coreDataManager, id: id)
         deleteGameOperation.completionBlock = {
             completion(deleteGameOperation.succeeded)
         }
         operationQueue.addOperation(deleteGameOperation)
+    }
+
+    func postGame(id: Int64, title: String?, developer: String?, year: String?, image: Data?, completion: @escaping (Bool) -> Void) {
+        let postGameOperation = PostGameOperation(coreDataManager: coreDataManager, title: title, developer: developer, year: year, image: nil)
+        postGameOperation.completionBlock = {
+            completion(postGameOperation.succeeded)
+        }
+        operationQueue.addOperation(postGameOperation)
     }
 
 }

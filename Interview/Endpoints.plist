@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>host</key>
-	<string>interview.merchv.com</string>
+	<string>localhost</string>
 	<key>protocol</key>
-	<string>https://</string>
+	<string>http://</string>
 	<key>port</key>
-	<string>8443</string>
+	<string>8080</string>
 	<key>path</key>
 	<string>/Interview/</string>
 	<key>connect</key>

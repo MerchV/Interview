@@ -10,9 +10,9 @@ import UIKit
 
 class DeleteGameOperation: BaseOperation {
 
-    private var id: Int32
+    private var id: Int64
 
-    init(coreDataManager: CoreDataManager, id: Int32) {
+    init(coreDataManager: CoreDataManager, id: Int64) {
         self.id = id
         super.init()
         self.coreDataManager = coreDataManager

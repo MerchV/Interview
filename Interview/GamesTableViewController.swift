@@ -118,7 +118,7 @@ class GamesTableViewController: UITableViewController, UINavigationControllerDel
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! GameTableViewCell
         let game = tableArray![indexPath.row]
-        cell.nameLabel?.text = game.name
+        cell.nameLabel?.text = game.title
         cell.developerLabel?.text = game.developer
         cell.dateLabel?.text = game.year
         cell.gameImageView?.image = nil // to avoid the 'cell reuse problem,' first we need to clear the image

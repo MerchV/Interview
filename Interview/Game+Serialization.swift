@@ -12,7 +12,7 @@ import Foundation
 extension Game {
 
     func deserialize(jsonObject: [String:Any?]) {
-        name = jsonObject["name"] as? String
+        title = jsonObject["title"] as? String
         developer = jsonObject["developer"] as? String
         year = jsonObject["year"] as? String
         image = jsonObject["image"] as? String

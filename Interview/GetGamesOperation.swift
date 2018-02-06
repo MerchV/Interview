@@ -32,7 +32,7 @@ class GetGamesOperation: BaseOperation {
                     var existingGames = try? backgroundManagedObjectContext.fetch(existingGamesFetch)
 
                     for game in games {
-                        guard let id = game["id"] as? Int32 else { continue }
+                        guard let id = game["id"] as? Int64 else { continue }
                         let matchingGames:[Game]? = existingGames?.filter({ (game:Game) -> Bool in
                             return game.id == id
                         })

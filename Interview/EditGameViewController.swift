@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import AVFoundation // for camera access
 
 enum EditGameViewControllerMode: Int {
     case new
     case edit
 }
 
-class EditGameViewController: UIViewController {
+class EditGameViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     var game: Game?
     var mode: EditGameViewControllerMode = .new
@@ -21,11 +22,14 @@ class EditGameViewController: UIViewController {
     @IBOutlet private weak var nameTextField: UITextField?
     @IBOutlet private weak var developerTextField: UITextField?
     @IBOutlet private weak var yearTextField: UITextField?
+    @IBOutlet private weak var boxArtImageView: UIImageView?
     @IBOutlet private weak var chooseButton: UIButton?
     @IBOutlet private weak var deleteGameButton: UIButton?
 
     private var editingManagedObjectContext: NSManagedObjectContext
     private var editingGame: Game?
+
+    private var imagePicker: UIImagePickerController?
     
     // MARK: - NSObject
     
@@ -145,6 +149,50 @@ class EditGameViewController: UIViewController {
         alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
+
+    @IBAction func chooseImageButtonPressed(_ sender: UIButton) {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Camera", comment: ""), style: .default, handler: { [weak self] (action:UIAlertAction) in
+            AVCaptureDevice.requestAccess(for: AVMediaType.video, completionHandler: { (granted:Bool) in
+                DispatchQueue.main.async {
+                    if granted {
+                        if UIImagePickerController.isSourceTypeAvailable(.camera) == true {
+                            self?.imagePicker = UIImagePickerController()
+                            self?.imagePicker!.sourceType = .camera
+                            self?.imagePicker!.allowsEditing = false
+                            self?.imagePicker!.delegate = self
+                            self?.imagePicker!.showsCameraControls = true
+                            self?.present((self?.imagePicker)!, animated: true, completion: nil)
+                        } else {
+                            print("Camera Not Available")
+                        }
+                    } else {
+                        let alert = UIAlertController(title: NSLocalizedString("Camera Access Denied", comment: ""), message: nil, preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: nil))
+                        self?.present(alert, animated: true, completion: nil)
+                    }
+                }
+            })
+        }))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Library", comment: ""), style: .default, handler: { [weak self] (action:UIAlertAction) in
+            DispatchQueue.main.async {
+                if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) == true {
+                    self?.imagePicker = UIImagePickerController()
+                    self?.imagePicker!.sourceType = .photoLibrary
+                    self?.imagePicker!.allowsEditing = false
+                    self?.imagePicker!.delegate = self
+                    self?.present((self?.imagePicker)!, animated: true, completion: nil)
+                } else {
+                    print("Photo Library Not Available")
+                }
+            }
+        }))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: { (action:UIAlertAction) in
+
+        }))
+        present(alert, animated: true, completion: nil)
+
+    }
     
     // MARK: - Private Methods
 
@@ -152,16 +200,59 @@ class EditGameViewController: UIViewController {
 	func reloadViews() {
         print("\(String(describing: self)) \(#function)")
         if mode == .edit && game != nil {
-            nameTextField?.text = game?.name
+            nameTextField?.text = game?.title
             developerTextField?.text = game?.developer
             yearTextField?.text = game?.year
+            OperationsManager.sharedInstance.getImage(urlString: game!.image, completion: { [weak self] (succeeded:Bool, image:UIImage?) in
+                DispatchQueue.main.async {
+                    if succeeded {
+                        self?.boxArtImageView?.image = image
+                    } else {
+
+                    }
+                }
+            })
         }
         deleteGameButton?.isHidden = mode == .new
+
     }
 
 	func reloadModel() {
         print("\(String(describing: self)) \(#function)")
     }
-    
+
+
+    // MARK: - UIImagePickerControllerDelegate
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        print(#function)
+        dismiss(animated: true) { [weak self] in
+            if var image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+                if picker.sourceType == .camera {
+                }
+                if let data = UIImageJPEGRepresentation(image, 0.8) {
+                    self?.boxArtImageView?.image = image
+//                    self?.currentCell?.fileActivityIndicatorView?.startAnimating()
+//                    (UIApplication.shared.delegate as! AppDelegate).operationsManager.postFilePrivate(fileData: data, filename: "CredentialPhoto.jpeg", completion: { [weak self] (succeeded:Bool, fileId:String?, cancelled:Bool, timedOut:Bool, networkingError:Error?, frErrors:[FRError]?, coreDataError:Error?) in
+//                        DispatchQueue.main.async {
+//                            self?.currentCell?.fileActivityIndicatorView?.stopAnimating()
+//                            if succeeded && fileId != nil {
+//                                self?.currentCell?.editingCertification?.fileId = fileId!
+//                                self?.currentCell?.fileSetButton?.isHidden = false
+//                                self?.currentCell?.fileUnsetButton?.isHidden = true
+//                            } else {
+//                                self?.handleErrors(title: NSLocalizedString("FILE UPLOAD", comment: ""), succeeded: succeeded, cancelled: cancelled, timedOut: timedOut, networkingError: networkingError, frErrors: frErrors, coreDataError: coreDataError, fields: nil, showsAlert: true, errorLabel: nil, jsonErrorFile: nil)
+//                            }
+//                        }
+//                    })
+                }
+            }
+        }
+    }
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        print(#function)
+        picker.dismiss(animated: true, completion: nil)
+    }
 
 }

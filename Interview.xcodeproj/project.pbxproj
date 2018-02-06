@@ -16,6 +16,7 @@
 		B90AF71C20145DB000273629 /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90AF71B20145DB000273629 /* BaseOperation.swift */; };
 		B90DD21E20249C1900FCCA0B /* BounceNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90DD21D20249C1900FCCA0B /* BounceNavigationController.swift */; };
 		B90DD2212024D33A00FCCA0B /* SlideAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90DD2202024D33A00FCCA0B /* SlideAnimator.swift */; };
+		B92904AE202A4A53005F07D0 /* city.png in Resources */ = {isa = PBXBuildFile; fileRef = B92904AD202A4A53005F07D0 /* city.png */; };
 		B941238C2023E14D007B7B21 /* AddGameSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941238B2023E14D007B7B21 /* AddGameSegue.swift */; };
 		B941238E2023EE09007B7B21 /* AddGameUnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941238D2023EE09007B7B21 /* AddGameUnwindSegue.swift */; };
 		B94B02BB201B4BF600049118 /* Game+Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94B02BA201B4BF600049118 /* Game+Serialization.swift */; };
@@ -25,6 +26,9 @@
 		B9572DE2201AD5E000651538 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9572DE0201AD5E000651538 /* Model.xcdatamodeld */; };
 		B95A8225201FA4AE001A51ED /* TestDeleteGameOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95A8224201FA4AE001A51ED /* TestDeleteGameOperation.swift */; };
 		B95F04D72019BF76009B0800 /* GetGamesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95F04D62019BF76009B0800 /* GetGamesOperation.swift */; };
+		B96A87BE2024F1550034E3A3 /* TestPostGameOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A87BD2024F1550034E3A3 /* TestPostGameOperation.swift */; };
+		B96A87C02024F1780034E3A3 /* PostGameOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A87BF2024F1780034E3A3 /* PostGameOperation.swift */; };
+		B96A87C12024FB8D0034E3A3 /* PostGameOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A87BF2024F1780034E3A3 /* PostGameOperation.swift */; };
 		B980AAA22023498C006CACAC /* StopTimesPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B980AA9F2023498C006CACAC /* StopTimesPresentationController.swift */; };
 		B98A5253201F343200592B5D /* TestGetGamesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A5252201F343200592B5D /* TestGetGamesOperation.swift */; };
 		B98A5254201F3D3100592B5D /* GetGamesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95F04D62019BF76009B0800 /* GetGamesOperation.swift */; };
@@ -34,6 +38,8 @@
 		B98A5258201F42E700592B5D /* Game+Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94B02BA201B4BF600049118 /* Game+Serialization.swift */; };
 		B98A525A201F488600592B5D /* DeleteGameOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A5259201F488600592B5D /* DeleteGameOperation.swift */; };
 		B98A525B201F488600592B5D /* DeleteGameOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98A5259201F488600592B5D /* DeleteGameOperation.swift */; };
+		B9BDE4862029613E006E1253 /* NSData+MimeType.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BDE4852029613E006E1253 /* NSData+MimeType.m */; };
+		B9BDE48820296684006E1253 /* Pilotwings_Box.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9BDE48720296684006E1253 /* Pilotwings_Box.jpg */; };
 		B9CC3C7C2023011100015901 /* EditGameSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CC3C7B2023011100015901 /* EditGameSegue.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +65,7 @@
 		B90AF71B20145DB000273629 /* BaseOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseOperation.swift; path = Interview/BaseOperation.swift; sourceTree = SOURCE_ROOT; };
 		B90DD21D20249C1900FCCA0B /* BounceNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceNavigationController.swift; sourceTree = "<group>"; };
 		B90DD2202024D33A00FCCA0B /* SlideAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideAnimator.swift; sourceTree = "<group>"; };
+		B92904AD202A4A53005F07D0 /* city.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = city.png; sourceTree = "<group>"; };
 		B941238B2023E14D007B7B21 /* AddGameSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameSegue.swift; sourceTree = "<group>"; };
 		B941238D2023EE09007B7B21 /* AddGameUnwindSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameUnwindSegue.swift; sourceTree = "<group>"; };
 		B94B02BA201B4BF600049118 /* Game+Serialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game+Serialization.swift"; sourceTree = "<group>"; };
@@ -70,11 +77,16 @@
 		B9572DE1201AD5E000651538 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		B95A8224201FA4AE001A51ED /* TestDeleteGameOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDeleteGameOperation.swift; sourceTree = "<group>"; };
 		B95F04D62019BF76009B0800 /* GetGamesOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GetGamesOperation.swift; path = Interview/GetGamesOperation.swift; sourceTree = SOURCE_ROOT; };
+		B96A87BD2024F1550034E3A3 /* TestPostGameOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPostGameOperation.swift; sourceTree = "<group>"; };
+		B96A87BF2024F1780034E3A3 /* PostGameOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGameOperation.swift; sourceTree = "<group>"; };
 		B980AA9F2023498C006CACAC /* StopTimesPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopTimesPresentationController.swift; sourceTree = "<group>"; };
 		B98A5248201F340900592B5D /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98A524C201F340900592B5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B98A5252201F343200592B5D /* TestGetGamesOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGetGamesOperation.swift; sourceTree = "<group>"; };
 		B98A5259201F488600592B5D /* DeleteGameOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteGameOperation.swift; sourceTree = "<group>"; };
+		B9BDE4842029613E006E1253 /* NSData+MimeType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MimeType.h"; sourceTree = "<group>"; };
+		B9BDE4852029613E006E1253 /* NSData+MimeType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MimeType.m"; sourceTree = "<group>"; };
+		B9BDE48720296684006E1253 /* Pilotwings_Box.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Pilotwings_Box.jpg; sourceTree = "<group>"; };
 		B9CC3C7B2023011100015901 /* EditGameSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditGameSegue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,6 +180,7 @@
 				B90AF71B20145DB000273629 /* BaseOperation.swift */,
 				B95F04D62019BF76009B0800 /* GetGamesOperation.swift */,
 				B98A5259201F488600592B5D /* DeleteGameOperation.swift */,
+				B96A87BF2024F1780034E3A3 /* PostGameOperation.swift */,
 			);
 			name = Operations;
 			sourceTree = "<group>";
@@ -192,6 +205,8 @@
 		B94B02BD201B4C3100049118 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B9BDE4842029613E006E1253 /* NSData+MimeType.h */,
+				B9BDE4852029613E006E1253 /* NSData+MimeType.m */,
 				B94B02BA201B4BF600049118 /* Game+Serialization.swift */,
 			);
 			name = Extensions;
@@ -208,9 +223,12 @@
 		B98A5249201F340900592B5D /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				B92904AD202A4A53005F07D0 /* city.png */,
+				B9BDE48720296684006E1253 /* Pilotwings_Box.jpg */,
 				B98A524C201F340900592B5D /* Info.plist */,
 				B98A5252201F343200592B5D /* TestGetGamesOperation.swift */,
 				B95A8224201FA4AE001A51ED /* TestDeleteGameOperation.swift */,
+				B96A87BD2024F1550034E3A3 /* TestPostGameOperation.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -321,6 +339,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B92904AE202A4A53005F07D0 /* city.png in Resources */,
+				B9BDE48820296684006E1253 /* Pilotwings_Box.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,10 +359,12 @@
 				B95F04D72019BF76009B0800 /* GetGamesOperation.swift in Sources */,
 				B90DD2212024D33A00FCCA0B /* SlideAnimator.swift in Sources */,
 				B9572DE2201AD5E000651538 /* Model.xcdatamodeld in Sources */,
+				B9BDE4862029613E006E1253 /* NSData+MimeType.m in Sources */,
 				B90AF70120143E3900273629 /* AppDelegate.swift in Sources */,
 				B90DD21E20249C1900FCCA0B /* BounceNavigationController.swift in Sources */,
 				B98A525A201F488600592B5D /* DeleteGameOperation.swift in Sources */,
 				B980AAA22023498C006CACAC /* StopTimesPresentationController.swift in Sources */,
+				B96A87C02024F1780034E3A3 /* PostGameOperation.swift in Sources */,
 				B94B02BF201B4C3D00049118 /* GamesTableViewController.swift in Sources */,
 				B94B02BB201B4BF600049118 /* Game+Serialization.swift in Sources */,
 				B90AF71C20145DB000273629 /* BaseOperation.swift in Sources */,
@@ -355,6 +377,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B98A5254201F3D3100592B5D /* GetGamesOperation.swift in Sources */,
+				B96A87C12024FB8D0034E3A3 /* PostGameOperation.swift in Sources */,
+				B96A87BE2024F1550034E3A3 /* TestPostGameOperation.swift in Sources */,
 				B98A5255201F3E6400592B5D /* CoreDataManager.m in Sources */,
 				B98A525B201F488600592B5D /* DeleteGameOperation.swift in Sources */,
 				B98A5258201F42E700592B5D /* Game+Serialization.swift in Sources */,

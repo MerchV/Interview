@@ -153,6 +153,14 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wKa-2m-Jxc">
+                                                <rect key="frame" x="275" y="341.5" width="80" height="40"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="nNW-eK-QQ6"/>
+                                                    <constraint firstAttribute="height" constant="40" id="rPb-Ti-vzF"/>
+                                                </constraints>
+                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Box Image:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zw6-wQ-LRv">
                                                 <rect key="frame" x="20" y="403" width="84.5" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -166,6 +174,9 @@
                                                 </constraints>
                                                 <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                                 <state key="normal" title="Choose"/>
+                                                <connections>
+                                                    <action selector="chooseImageButtonPressed:" destination="G6r-cm-awO" eventType="touchUpInside" id="WJJ-lq-PA4"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAI-5y-oPw">
                                                 <rect key="frame" x="0.0" y="474" width="375" height="44"/>
@@ -186,8 +197,10 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Xl5-X8-7Db" secondAttribute="trailing" constant="20" id="1KT-33-hEL"/>
                                             <constraint firstItem="Zw6-wQ-LRv" firstAttribute="top" secondItem="G1g-5C-foF" secondAttribute="bottom" constant="100" id="208-PX-tMc"/>
+                                            <constraint firstItem="ABG-yt-jdO" firstAttribute="top" secondItem="wKa-2m-Jxc" secondAttribute="bottom" constant="10" id="2CJ-QB-UxF"/>
                                             <constraint firstItem="mTU-xE-224" firstAttribute="top" secondItem="LhZ-B5-GZ2" secondAttribute="bottom" constant="100" id="5bC-Sr-aNQ"/>
                                             <constraint firstItem="G1g-5C-foF" firstAttribute="top" secondItem="mTU-xE-224" secondAttribute="bottom" constant="100" id="BE0-ov-lYP"/>
+                                            <constraint firstAttribute="trailing" secondItem="wKa-2m-Jxc" secondAttribute="trailing" constant="20" id="DTg-yi-Ifa"/>
                                             <constraint firstItem="G1g-5C-foF" firstAttribute="leading" secondItem="LhZ-B5-GZ2" secondAttribute="leading" id="Egv-z5-amZ"/>
                                             <constraint firstItem="0fA-zk-1mo" firstAttribute="centerY" secondItem="LhZ-B5-GZ2" secondAttribute="centerY" id="Ejm-Y1-iqC"/>
                                             <constraint firstItem="ABG-yt-jdO" firstAttribute="centerY" secondItem="Zw6-wQ-LRv" secondAttribute="centerY" id="LV5-wV-mgz"/>
@@ -233,6 +246,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="boxArtImageView" destination="wKa-2m-Jxc" id="zJd-U7-RUU"/>
                         <outlet property="chooseButton" destination="ABG-yt-jdO" id="IwY-br-lKm"/>
                         <outlet property="deleteGameButton" destination="qAI-5y-oPw" id="Nfn-hJ-uCi"/>
                         <outlet property="developerTextField" destination="Xl5-X8-7Db" id="mpj-7J-lP0"/>
@@ -245,7 +259,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BDF-1d-g6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="0NO-v7-zFB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2638" y="63"/>
+            <point key="canvasLocation" x="2637.5999999999999" y="62.518740629685162"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="az1-pw-Ngh">

@@ -3,3 +3,4 @@
 //
 
 #import "CoreDataManager.h"
+#import "NSData+MimeType.h"
